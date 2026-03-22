@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Heebo", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  @apply text-slate-800 bg-slate-50;
+  transition: background-color 0.3s, color 0.3s, filter 0.3s;
+}
+
+/* Accessibility Classes */
+body.high-contrast {
+  background-color: #000 !important;
+  color: #facc15 !important;
+}
+
+body.high-contrast * {
+  border-color: #facc15 !important;
+  color: #facc15 !important;
+  background-color: #000 !important;
+}
+
+body.high-contrast img {
+  filter: grayscale(100%) contrast(120%);
+}
+
+body.grayscale-mode {
+  filter: grayscale(100%);
+}
+
+body.large-text {
+  font-size: 120%;
+}
+
+body.extra-large-text {
+  font-size: 140%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
